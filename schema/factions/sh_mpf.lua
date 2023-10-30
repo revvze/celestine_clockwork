@@ -12,8 +12,12 @@ FACTION.maxArmor = 100;
 FACTION.startChatNoise = "npc/overwatch/radiovoice/on1.wav";
 FACTION.endChatNoise = "npc/overwatch/radiovoice/off4.wav";
 FACTION.models = {
-	female = {"models/policetrench.mdl"},
-	male = {"models/policetrench.mdl"}
+	female = {
+		"models/cppackredux/groundunits/betaunit_sentinel.mdl"
+},
+	male = {
+		"models/cppackredux/groundunits/betaunit_sentinel.mdl"
+}
 };
 FACTION.weapons = {
 	"cw_stunstick"
@@ -51,45 +55,37 @@ FACTION.ranks = {
 	["i6"] = {
 		position = 8,
 		class = "Metropolice Unit",
-		model = "models/policetrench.mdl"
 	},
 	["i5"] = {
 		position = 7,
 		class = "Metropolice Unit",
-		model = "models/policetrench.mdl"
 	},
 	["i4"] = {
 		position = 6,
 		class = "Metropolice Unit",
-		model = "models/policetrench.mdl",
 
 	},
 	["i3"] = {
 		position = 5,
 		class = "Metropolice Unit",
-		model = "models/policetrench.mdl",
 	},
 	["i2"] = {
 		position = 4,
 		class = "Metropolice Unit",
-		model = "models/policetrench.mdl",
 	},
 	["i1"] = {
 		position = 3,
 		class = "Metropolice Unit",
-		model = "models/policetrench.mdl",
 		canPromote = 8,
 		canDemote = 8
 	},
 	["RL"] = {
 		position = 2,
 		class = "Elite Metropolice",
-		model = "models/policetrench.mdl",
 	},
-	["CmD"] = {
+	["CPC"] = {
 		position = 1,
 		class = "Elite Metropolice",
-		model = "models/policetrench.mdl",
 		canPromote = 2,
 		canDemote = 2
 	}

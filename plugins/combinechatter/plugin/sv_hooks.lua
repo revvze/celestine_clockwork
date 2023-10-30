@@ -62,6 +62,17 @@ end;
  
 function PLUGIN:PlayerThink(player, curTime)
     if ((player.nextChatterEmit or 0) < curTime) then
+        if (player:GetFaction() == FACTION_OTA and !player:IsNoClipping() and player:Alive()) then
+            player.nextChatterEmit = curTime + math.random(20, 90);
+            PLUGIN:EmitRandomChatter(player);
+        else
+            player.nextChatterEmit = curTime + 90;
+        end;
+    end;
+end;
+
+function PLUGIN:PlayerThink(player, curTime)
+    if ((player.nextChatterEmit or 0) < curTime) then
         if (player:GetFaction() == FACTION_MPF and !player:IsNoClipping() and player:Alive()) then
             player.nextChatterEmit = curTime + math.random(20, 90);
             PLUGIN:EmitRandomChatter(player);

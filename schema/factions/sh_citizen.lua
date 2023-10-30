@@ -9,7 +9,8 @@ FACTION.useFullName = true;
 FACTION.material = "hl2rp2/factions/citizen";
 FACTION.startingInv = {
 	["cw_suitcase"] = 1
-}
+};
+
 
 -- Called when a player is transferred to the faction.
 function FACTION:OnTransferred(player, faction, name)
