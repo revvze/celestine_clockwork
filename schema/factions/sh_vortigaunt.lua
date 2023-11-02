@@ -9,7 +9,7 @@ FACTION.useFullName = true;
 FACTION.whitelist = true;
 FACTION.material = "hl2rp2/factions/vortigaunt";
 FACTION.models = {
-	male = {"models/vortigaunt_slave.mdl"}
+	male = {"models/vortigaunt_rp/vortigaunt.mdl"}
 };
 
 FACTION_VORTIGAUNT = FACTION:Register();
