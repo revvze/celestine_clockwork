@@ -10,7 +10,7 @@
 function cwStamina:PlayerSaveCharacterData(player, data)
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then we set the stamina (Ratatouille)
 		if (data["Stamina"]) then
 			data["Stamina"] = math.Round(data["Stamina"]);
 		end;
@@ -21,7 +21,7 @@ end;
 function cwStamina:PlayerRestoreCharacterData(player, data)
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then we set the stamina (Ratatouille)
 		if (!data["Stamina"]) then
 			data["Stamina"] = 100;
 		end;
@@ -32,7 +32,7 @@ end;
 function cwStamina:PostPlayerSpawn(player, lightSpawn, changeClass, firstSpawn)
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then we set the stamina (Ratatouille)
 		if (!firstSpawn and !lightSpawn) then
 			player:SetCharacterData("Stamina", 100);
 		end;
@@ -52,7 +52,7 @@ end;
 function cwStamina:PlayerPunchThrown(player)
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 
-	if not (faction == "ota") then -- If the player is not an OTA, he don't need to get stronger when punching stuffs (Ratatouille)
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA, he don't need to get stronger when punching stuffs (Ratatouille)
 		local attribute = Clockwork.attributes:Fraction(player, ATB_STAMINA, 1.5, 0.25);
 		local decrease = 5 / (1 + attribute);
 		
@@ -64,7 +64,7 @@ end;
 function cwStamina:PlayerSetSharedVars(player, curTime)
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then we set the stamina (Ratatouille)
 		player:SetSharedVar("Stamina", math.floor(player:GetCharacterData("Stamina")));
 	end;		
 end;
@@ -73,7 +73,7 @@ end;
 function cwStamina:PlayerShouldStaminaRegenerate(player)
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if not (faction == "ota") then -- If the player is not an OTA then he can regen stamina (Ratatouille)
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then he can regen stamina (Ratatouille)
 		return true;
 	end;
 end;
@@ -82,7 +82,7 @@ end;
 function cwStamina:PlayerShouldStaminaDrain(player)
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if not (faction == "ota") then -- If the player is not an OTA then he can loose stamina (Ratatouille)
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then he can loose stamina (Ratatouille)
 		return true;
 	end;
 end;
@@ -98,7 +98,7 @@ function cwStamina:PlayerThink(player, curTime, infoTable)
 	local decrease = (drainScale + (drainScale - healthScale)) - ((drainScale * 0.5) * attribute);
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if (!player:IsNoClipping() and player:IsOnGround() and faction != "ota") then -- If the player is not in NoClip, if he's on the ground and he's not an OTA (Ratatouille)
+	if (!player:IsNoClipping() and player:IsOnGround() and faction != "overwatch transhuman arm") then -- If the player is not in NoClip, if he's on the ground and he's not an OTA (Ratatouille)
 		local playerVelocityLength = player:GetVelocity():Length();
 		if ((infoTable.isRunning or infoTable.isJogging) and playerVelocityLength != 0) then
 			if (Clockwork.plugin:Call("PlayerShouldStaminaDrain", player)) then
@@ -145,7 +145,7 @@ function cwStamina:PlayerThink(player, curTime, infoTable)
 		end;
 	end;
 
-	if not (faction == "ota") then -- If the player is not an OTA then he can play the exausted sound
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then he can play the exausted sound
 		local stamina = player:GetCharacterData("Stamina");
 		
 		if (stamina < 30 and Clockwork.event:CanRun("sounds", "breathing")) then
