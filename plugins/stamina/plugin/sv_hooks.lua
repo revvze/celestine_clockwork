@@ -8,53 +8,83 @@
 
 -- Called when a player's character data should be saved.
 function cwStamina:PlayerSaveCharacterData(player, data)
-	if (data["Stamina"]) then
-		data["Stamina"] = math.Round(data["Stamina"]);
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+	
+	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+		if (data["Stamina"]) then
+			data["Stamina"] = math.Round(data["Stamina"]);
+		end;
 	end;
 end;
 
 -- Called when a player's character data should be restored.
 function cwStamina:PlayerRestoreCharacterData(player, data)
-	if (!data["Stamina"]) then
-		data["Stamina"] = 100;
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+	
+	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+		if (!data["Stamina"]) then
+			data["Stamina"] = 100;
+		end;
 	end;
 end;
 
 -- Called just after a player spawns.
 function cwStamina:PostPlayerSpawn(player, lightSpawn, changeClass, firstSpawn)
-	if (!firstSpawn and !lightSpawn) then
-		player:SetCharacterData("Stamina", 100);
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+	
+	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+		if (!firstSpawn and !lightSpawn) then
+			player:SetCharacterData("Stamina", 100);
+		end;
 	end;
 end;
 
 -- Called when a player attempts to throw a punch.
 function cwStamina:PlayerCanThrowPunch(player)
-	if (player:GetCharacterData("Stamina") <= 10) then
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+	
+	if (player:GetCharacterData("Stamina") <= 10 and faction != "ota") then -- If the player has stamina and is not an OTA (Ratatouille)
 		return false;
 	end;
 end;
 
 -- Called when a player throws a punch.
 function cwStamina:PlayerPunchThrown(player)
-	local attribute = Clockwork.attributes:Fraction(player, ATB_STAMINA, 1.5, 0.25);
-	local decrease = 5 / (1 + attribute);
-	
-	player:SetCharacterData("Stamina", math.Clamp(player:GetCharacterData("Stamina") - decrease, 0, 100));
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+
+	if not (faction == "ota") then -- If the player is not an OTA, he don't need to get stronger when punching stuffs (Ratatouille)
+		local attribute = Clockwork.attributes:Fraction(player, ATB_STAMINA, 1.5, 0.25);
+		local decrease = 5 / (1 + attribute);
+		
+		player:SetCharacterData("Stamina", math.Clamp(player:GetCharacterData("Stamina") - decrease, 0, 100));
+	end;
 end;
 
 -- Called when a player's shared variables should be set.
 function cwStamina:PlayerSetSharedVars(player, curTime)
-	player:SetSharedVar("Stamina", math.floor(player:GetCharacterData("Stamina")));
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+	
+	if not (faction == "ota") then -- If the player is not an OTA then we set the stamina (Ratatouille)
+		player:SetSharedVar("Stamina", math.floor(player:GetCharacterData("Stamina")));
+	end;		
 end;
 
 -- Called when a player's stamina should regenerate.
 function cwStamina:PlayerShouldStaminaRegenerate(player)
-	return true;
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+	
+	if not (faction == "ota") then -- If the player is not an OTA then he can regen stamina (Ratatouille)
+		return true;
+	end;
 end;
 
 -- Called when a player's stamina should drain.
 function cwStamina:PlayerShouldStaminaDrain(player)
-	return true;
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
+	
+	if not (faction == "ota") then -- If the player is not an OTA then he can loose stamina (Ratatouille)
+		return true;
+	end;
 end;
 
 -- Called at an interval while a player is connected.
@@ -66,8 +96,9 @@ function cwStamina:PlayerThink(player, curTime, infoTable)
 	local maxHealth = player:GetMaxHealth();
 	local healthScale = (drainScale * (math.Clamp(player:Health(), maxHealth * 0.1, maxHealth) / maxHealth));
 	local decrease = (drainScale + (drainScale - healthScale)) - ((drainScale * 0.5) * attribute);
+	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	
-	if (!player:IsNoClipping() and player:IsOnGround()) then
+	if (!player:IsNoClipping() and player:IsOnGround() and faction != "ota") then -- If the player is not in NoClip, if he's on the ground and he's not an OTA (Ratatouille)
 		local playerVelocityLength = player:GetVelocity():Length();
 		if ((infoTable.isRunning or infoTable.isJogging) and playerVelocityLength != 0) then
 			if (Clockwork.plugin:Call("PlayerShouldStaminaDrain", player)) then
@@ -109,27 +140,29 @@ function cwStamina:PlayerThink(player, curTime, infoTable)
 
 		infoTable.walkSpeed = newWalkSpeed - (diffWalkSpeed - ((diffWalkSpeed / 100) * player:GetCharacterData("Stamina")));
 		
-		if (player:GetCharacterData("Stamina") < 1) then
+		if (player:GetCharacterData("Stamina") < 1 or faction == "ota") then -- If player has stamina or is an OTA then he can jog (Ratatouille)
 			player:SetSharedVar("IsJogMode", false);
 		end;
 	end;
-	
-	local stamina = player:GetCharacterData("Stamina");
-	
-	if (stamina < 30 and Clockwork.event:CanRun("sounds", "breathing")) then
-		playBreathSound = true;
-	end;
-	
-	if (!player.nextBreathingSound or curTime >= player.nextBreathingSound) then
-		if (!Clockwork.player:IsNoClipping(player)) then
-			player.nextBreathingSound = curTime + 1;
-			
-			if (playBreathSound) then
-				local volume = Clockwork.config:Get("breathing_volume"):Get() - stamina;
 
-				Clockwork.player:StartSound(player, "LowStamina", "player/breathe1.wav", volume / 100);
-			else
-				Clockwork.player:StopSound(player, "LowStamina", 4);
+	if not (faction == "ota") then -- If the player is not an OTA then he can play the exausted sound
+		local stamina = player:GetCharacterData("Stamina");
+		
+		if (stamina < 30 and Clockwork.event:CanRun("sounds", "breathing")) then
+			playBreathSound = true;
+		end;
+		
+		if (!player.nextBreathingSound or curTime >= player.nextBreathingSound) then
+			if (!Clockwork.player:IsNoClipping(player)) then
+				player.nextBreathingSound = curTime + 1;
+				
+				if (playBreathSound) then
+					local volume = Clockwork.config:Get("breathing_volume"):Get() - stamina;
+	
+					Clockwork.player:StartSound(player, "LowStamina", "player/breathe1.wav", volume / 100);
+				else
+					Clockwork.player:StopSound(player, "LowStamina", 4);
+				end;
 			end;
 		end;
 	end;
