@@ -130,8 +130,10 @@ function cwStamina:PlayerThink(player, curTime, infoTable)
 	local newRunSpeed = infoTable.runSpeed * 2;
 	local diffRunSpeed = newRunSpeed - infoTable.walkSpeed;
 	local maxRunSpeed = Clockwork.config:Get("run_speed"):Get();
-
-	infoTable.runSpeed = math.Clamp(newRunSpeed - (diffRunSpeed - ((diffRunSpeed / 100) * player:GetCharacterData("Stamina"))), infoTable.walkSpeed, maxRunSpeed);
+	
+	if not (faction == "overwatch transhuman arm") then -- If the player is not an OTA then his runspeed is affected by stamina
+		infoTable.runSpeed = math.Clamp(newRunSpeed - (diffRunSpeed - ((diffRunSpeed / 100) * player:GetCharacterData("Stamina"))), infoTable.walkSpeed, maxRunSpeed);
+	end;
 	
 	if (infoTable.isJogging) then
 		local walkSpeed = Clockwork.config:Get("walk_speed"):Get();
