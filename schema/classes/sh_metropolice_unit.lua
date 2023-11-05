@@ -7,7 +7,6 @@ local CLASS = Clockwork.class:New("Metropolice Unit");
 	CLASS.color = Color(50, 100, 150, 255);
 	CLASS.factions = {FACTION_MPF};
 	CLASS.isDefault = true;
-	CLASS.wagesName = "Supplies";
 	CLASS.description = "A metropolice unit working as Civil Protection.";
 	CLASS.defaultPhysDesc = "Wearing a metrocop jacket with a radio";
 CLASS_MPU = CLASS:Register();
