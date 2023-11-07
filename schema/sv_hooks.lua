@@ -1075,26 +1075,27 @@ function Schema:PlayerCanDropItem(player, itemTable, noMessage)
 		
 		return false;
 	end;
-	if (DropProtectionTable) then
-		for EntityCheck=1,#DropProtectionTable do -- We loop the table to find matching items (Ratatouille)
-			if (ContinueLoop == true) then
-				if (DropProtectionTable[EntityCheck][1] == itemTable("uniqueID)) then -- We check if the itemid is in the said table (Ratatouille)
-					ItemFactionCheck = DropProtectionTable[EntityCheck][2]; -- We take the item from the table and extract the faction table for futher checks (Ratatouille)
-					ContinueLoop = false; -- We don't need to continue looking into the table (Ratatouille)
-				end;
-			else
-				break;
+	local ContinueLoop = true;
+	print("Working1");
+	for EntityCheck=1,#DropProtectionTable do -- We loop the table to find matching items (Ratatouille)
+		if (ContinueLoop == true) then
+			if (DropProtectionTable[EntityCheck][1] == itemTable("uniqueID)) then -- We check if the itemid is in the said table (Ratatouille)
+			ItemFactionCheck = DropProtectionTable[EntityCheck][2]; -- We take the item from the table and extract the faction table for futher checks (Ratatouille)
+			ContinueLoop = false; -- We don't need to continue looking into the table (Ratatouille)
 			end;
+		else
+			break;
 		end;
 	end;
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
 	if (ItemFactionCheck) then -- If we have something in the ItemFactionCheck then we look inside (Ratatouille)
 		for FactionCheck=1,#ItemFactionCheck do -- We loop the faction table in the item (Ratatouille)
+		print("Faction of the player :"..faction); PrintTable(ItemFactionCheck[FactionCheck]);
 			if (faction == string.lower(ItemFactionCheck[FactionCheck])) then -- if the faction of the player is matching the drop restrain
 				return false; -- The player cannot drop the item (Ratatouille)
 			end;
 		end;
-	end;							
+	end;						
 end;
 
 -- Called when a player attempts to give an item to a storage (Ratatouille)
