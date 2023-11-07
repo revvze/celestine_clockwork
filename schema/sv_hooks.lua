@@ -1079,7 +1079,7 @@ function Schema:PlayerCanDropItem(player, itemTable, noMessage)
 	print("Working1");
 	for EntityCheck=1,#DropProtectionTable do -- We loop the table to find matching items (Ratatouille)
 		if (ContinueLoop == true) then
-			if (DropProtectionTable[EntityCheck][1] == itemTable("uniqueID)) then -- We check if the itemid is in the said table (Ratatouille)
+			if (DropProtectionTable[EntityCheck][1] == itemTable("uniqueID")) then -- We check if the itemid is in the said table (Ratatouille)
 			ItemFactionCheck = DropProtectionTable[EntityCheck][2]; -- We take the item from the table and extract the faction table for futher checks (Ratatouille)
 			ContinueLoop = false; -- We don't need to continue looking into the table (Ratatouille)
 			end;
@@ -1100,16 +1100,14 @@ end;
 
 -- Called when a player attempts to give an item to a storage (Ratatouille)
 function Clockwork:PlayerCanGiveToStorage(player, storageTable, itemTable)
-	if (DropProtectionTable) then
-		for EntityCheck=1,#DropProtectionTable do -- We loop the table to find matching items (Ratatouille)
-			if (ContinueLoop == true) then
-				if (DropProtectionTable[EntityCheck][1] == itemTable("uniqueID)) then -- We check if the itemid is in the said table (Ratatouille)
-					ItemFactionCheck = DropProtectionTable[EntityCheck][2]; -- We take the item from the table and extract the faction table for futher checks (Ratatouille)
-					ContinueLoop = false; -- We don't need to continue looking into the table (Ratatouille)
-				end;
-			else
-				break;
+	for EntityCheck=1,#DropProtectionTable do -- We loop the table to find matching items (Ratatouille)
+		if (ContinueLoop == true) then
+			if (DropProtectionTable[EntityCheck][1] == itemTable("uniqueID")) then -- We check if the itemid is in the said table (Ratatouille)
+				ItemFactionCheck = DropProtectionTable[EntityCheck][2]; -- We take the item from the table and extract the faction table for futher checks (Ratatouille)
+				ContinueLoop = false; -- We don't need to continue looking into the table (Ratatouille)
 			end;
+		else
+			break;
 		end;
 	end;
 	local faction = string.lower(player:GetFaction()); -- We get the player's faction name (Ratatouille)
