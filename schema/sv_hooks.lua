@@ -1099,7 +1099,8 @@ function Schema:PlayerCanDropItem(player, itemTable, noMessage)
 end;
 
 -- Called when a player attempts to give an item to a storage (Ratatouille)
-function Clockwork:PlayerCanGiveToStorage(player, storageTable, itemTable)
+function Schema:PlayerCanGiveToStorage(player, storageTable, itemTable)
+	local ContinueLoop = true;
 	for EntityCheck=1,#DropProtectionTable do -- We loop the table to find matching items (Ratatouille)
 		if (ContinueLoop == true) then
 			if (DropProtectionTable[EntityCheck][1] == itemTable("uniqueID")) then -- We check if the itemid is in the said table (Ratatouille)
