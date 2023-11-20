@@ -7,7 +7,7 @@ local ITEM = Clockwork.item:New("grenade_base");
 
 ITEM.name = "ItemSmoke";
 ITEM.cost = 25;
-ITEM.classes = {CLASS_EMP, CLASS_EOW};
+ITEM.classes = {CLASS_EOW};
 ITEM.model = "models/items/grenadeammo.mdl";
 ITEM.weight = 0.8;
 ITEM.uniqueID = "cw_smokegrenade";
