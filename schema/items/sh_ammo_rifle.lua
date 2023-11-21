@@ -8,7 +8,6 @@ local ITEM = Clockwork.item:New("ammo_base");
 ITEM.name = "7.62 x 39mm Ammunition";
 ITEM.cost = 50;
 ITEM.model = "models/Items/BoxMRounds.mdl";
-ITEM.plural = "Rifle Ammunition";
 ITEM.weight = 1;
 ITEM.uniqueID = "ammo_ar2";
 ITEM.business = false;
