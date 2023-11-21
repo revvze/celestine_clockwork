@@ -243,7 +243,7 @@ end;
 -- Called when the cinematic intro info is needed.
 function Schema:GetCinematicIntroInfo()
 	return {
-		credits = "Designed and developed by "..self:GetAuthor()..".",
+		credits = "Designed and developed by RVVZ.",
 		title = Clockwork.config:Get("intro_text_big"):Get(),
 		text = Clockwork.config:Get("intro_text_small"):Get()
 	};
@@ -275,7 +275,7 @@ function Schema:GetPlayerScoreboardClass(player)
 	end;
 	
 	if (faction == FACTION_MPF) then
-		return "Civil Protection";
+		return "Metropolice Force";
 	elseif (faction == FACTION_OTA) then
 		return "Overwatch Transhuman Arm";
 	end;
