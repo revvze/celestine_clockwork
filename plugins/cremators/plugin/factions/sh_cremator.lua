@@ -5,7 +5,7 @@ FACTION.isCombineFaction = true;
 FACTION.useFullName = true;
 FACTION.whitelist = true;
 FACTION.models = {
-	male = {"models/combine_cremator_oc.mdl"}
+	male = {"models/_monsters/combine/cremator.mdl"}
 };
 
 FACTION.noNeeds = true;

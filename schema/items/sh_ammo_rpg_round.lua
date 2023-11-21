@@ -6,7 +6,7 @@
 
 local ITEM = Clockwork.item:New("ammo_base");
 
-ITEM.name = "RPG Missle";
+ITEM.name = "ItemRPGMissile";
 ITEM.cost = 80;
 ITEM.model = "models/weapons/w_missile_launch.mdl";
 ITEM.access = "V";

@@ -5,7 +5,7 @@
 
 local ITEM = Clockwork.item:New("ammo_base");
 
-ITEM.name = "Iron Rebar Bolts";
+ITEM.name = "ItemCrossbowBolts";
 ITEM.cost = 50;
 ITEM.model = "models/items/crossbowrounds.mdl";
 ITEM.access = "V";

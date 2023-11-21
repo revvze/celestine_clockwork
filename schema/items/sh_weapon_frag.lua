@@ -5,14 +5,15 @@
 
 local ITEM = Clockwork.item:New("grenade_base");
 
-ITEM.name = "ItemSmoke";
-ITEM.cost = 25;
-ITEM.classes = {CLASS_EMP, CLASS_EOW};
+ITEM.name = "ItemGrenade";
+ITEM.cost = 50;
 ITEM.model = "models/items/grenadeammo.mdl";
 ITEM.weight = 0.8;
-ITEM.uniqueID = "cw_smokegrenade";
+ITEM.access = "V";
+ITEM.classes = {CLASS_EOW};
+ITEM.uniqueID = "weapon_frag";
 ITEM.business = true;
-ITEM.description = "ItemSmokeDesc";
+ITEM.description = "ItemGrenadeDesc";
 ITEM.isAttachment = true;
 ITEM.loweredOrigin = Vector(3, 0, -4);
 ITEM.loweredAngles = Angle(0, 45, 0);
