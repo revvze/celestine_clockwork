@@ -21,7 +21,7 @@ Clockwork.option:SetKey("default_time", {minute = 0, hour = 0, day = 1});
 Clockwork.option:SetKey("model_shipment", "models/items/item_item_crate.mdl");
 Clockwork.option:SetKey("intro_image", "celestine/HL2RP_Logo");
 Clockwork.option:SetKey("schema_logo", "celestine/HL2RP_Logo");
-Clockwork.option:SetKey("menu_music", "music/trainstation1.mp3");
+Clockwork.option:SetKey("menu_music", "music/operation_stabilization.mp3");
 Clockwork.option:SetKey("model_cash", "models/props_lab/box01a.mdl");
 Clockwork.option:SetKey("gradient", "hl2rp2/gradient");
 
