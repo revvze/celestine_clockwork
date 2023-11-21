@@ -5,9 +5,8 @@
 
 local ITEM = Clockwork.item:New("ammo_base");
 
-ITEM.name = "ItemShotgunShells";
+ITEM.name = "12 Gauge Ammunition";
 ITEM.cost = 30;
-ITEM.classes = {CLASS_EOW};
 ITEM.model = "models/items/boxbuckshot.mdl";
 ITEM.weight = 1;
 ITEM.uniqueID = "ammo_buckshot";
