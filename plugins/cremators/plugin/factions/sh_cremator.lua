@@ -5,7 +5,7 @@ FACTION.isCombineFaction = true;
 FACTION.useFullName = true;
 FACTION.whitelist = true;
 FACTION.models = {
-	male = {"models/cremato2.mdl"}
+	male = {"models/combine_cremator_oc.mdl"}
 };
 
 FACTION.noNeeds = true;
@@ -22,7 +22,7 @@ end;
 
 -- Called when a player's name should be assigned for the faction.
 function FACTION:GetName(player, character)
-	return "C17:UCU.CREMATOR-"..Clockwork.kernel:ZeroNumberToDigits(math.random(1, 999), 3);
+	return "CREMATOR."..Clockwork.kernel:ZeroNumberToDigits(math.random(1, 999), 3);
 end;
 
 FACTION_CREMATOR = FACTION:Register();

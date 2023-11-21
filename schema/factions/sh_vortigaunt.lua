@@ -12,4 +12,8 @@ FACTION.models = {
 	male = {"models/vortigaunt_rp/vortigaunt.mdl"}
 };
 
+function FACTION:GetName(player, character)
+	return "BIOTIC."..Clockwork.kernel:ZeroNumberToDigits(math.random(1, 999), 5);
+end;
+
 FACTION_VORTIGAUNT = FACTION:Register();
