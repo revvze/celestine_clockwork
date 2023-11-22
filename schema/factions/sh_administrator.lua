@@ -14,9 +14,11 @@ FACTION.models = {
 		"models/breen.mdl"
 	};
 };
+
 FACTION.startingInv = {
 	["handheld_radio"] = 1
 };
+
 FACTION.entRelationship = {
 	["npc_combine_s"] = "Like",
 	["npc_helicopter"] = "Like",
@@ -32,7 +34,9 @@ FACTION.entRelationship = {
 	["npc_strider"] = "Like",
 	["npc_turret_ceiling"] = "Like",
 	["npc_turret_ground"] = "Like",
-	["npc_combine_camera"] = "Like"
+	["npc_combine_camera"] = "Like",
+	["Beta_Stalker"] = "Like",
+	["npc_hunter"] = "Like"
 };
 
 -- Called when a player is transferred to the faction.

@@ -30,9 +30,12 @@ FACTION.startingInv = {
 	["ammo_9mm"] = 2,
 	["tfa_rtbr_stunstick"] = 1
 };
+
 FACTION.respawnInv = {
-	["tfa_rtbr_stunstick"] = 1
+	["tfa_rtbr_stunstick"] = 1,
+	["ammo_9mm"] = 2,
 };
+
 FACTION.entRelationship = {
 	["npc_combine_s"] = "Like",
 	["npc_helicopter"] = "Like",
@@ -48,8 +51,11 @@ FACTION.entRelationship = {
 	["npc_strider"] = "Like",
 	["npc_turret_ceiling"] = "Like",
 	["npc_turret_ground"] = "Like",
-	["npc_combine_camera"] = "Like"
+	["npc_combine_camera"] = "Like",
+	["Beta_Stalker"] = "Like",
+	["npc_hunter"] = "Like"
 };
+
 FACTION.ranks = {
 	["RCT"] = {
 		position = 9,
@@ -85,8 +91,9 @@ FACTION.ranks = {
 	["RL"] = {
 		position = 2,
 		class = "Elite Metropolice",
+
 	},
-	["CPC"] = {
+	["MPC"] = {
 		position = 1,
 		class = "Elite Metropolice",
 		canPromote = 2,

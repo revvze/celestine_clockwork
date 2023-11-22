@@ -16,6 +16,26 @@ FACTION.listenChannels = {
 	["combine"] = 1
 };
 
+FACTION.entRelationship = {
+	["npc_combine_s"] = "Like",
+	["npc_helicopter"] = "Like",
+	["npc_metropolice"] = "Like",
+	["npc_manhack"] = "Like",
+	["npc_combinedropship"] = "Like",
+	["npc_rollermine"] = "Like",
+	["npc_stalker"] = "Like",
+	["npc_turret_floor"] = "Like",
+	["npc_combinegunship"] = "Like",
+	["npc_cscanner"] = "Like",
+	["npc_clawscanner"] = "Like",
+	["npc_strider"] = "Like",
+	["npc_turret_ceiling"] = "Like",
+	["npc_turret_ground"] = "Like",
+	["npc_combine_camera"] = "Like",
+	["Beta_Stalker"] = "Like",
+	["npc_hunter"] = "Like"
+};
+
 -- Called when a player's model should be assigned for the faction.
 function FACTION:GetModel(player, character)
 	return self.models.male[1];
