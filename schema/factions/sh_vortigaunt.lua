@@ -5,7 +5,6 @@
 
 local FACTION = Clockwork.faction:New("Vortigaunt");
 
-FACTION.useFullName = true;
 FACTION.whitelist = true;
 FACTION.material = "hl2rp2/factions/vortigaunt";
 FACTION.models = {
@@ -13,7 +12,7 @@ FACTION.models = {
 };
 
 function FACTION:GetName(player, character)
-	return "BIOTIC."..Clockwork.kernel:ZeroNumberToDigits(math.random(1, 999), 5);
+	return "BIOTIC."..Clockwork.kernel:ZeroNumberToDigits(math.random(1, 999), 3);
 end;
 
 FACTION_VORTIGAUNT = FACTION:Register();

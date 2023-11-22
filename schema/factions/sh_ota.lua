@@ -31,13 +31,12 @@ FACTION.ranks = {
 };
 FACTION.startingInv = {
 	["handheld_radio"] = 1,
-	["weapon_pistol"] = 1,
-	["ammo_pistol"] = 1,
-	["weapon_ar2"] = 1,
-	["ammo_ar2"] = 1
+	["tfa_rtbr_oicw"] = 1,
+	--[""] = 1
 };
 FACTION.respawnInv = {
-	["ammo_pistol"] = 2
+	["tfa_rtbr_oicw"] = 1,
+	--[""] = 2
 };
 FACTION.entRelationship = {
 	["npc_combine_s"] = "Like",

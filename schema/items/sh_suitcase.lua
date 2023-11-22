@@ -5,8 +5,7 @@
 
 local ITEM = Clockwork.item:New("weapon_base");
 
-ITEM.name = "ItemSuitcase";
-ITEM.cost = 12;
+ITEM.name = "Suitcase";
 ITEM.model = "models/weapons/w_suitcase_passenger.mdl";
 ITEM.weight = 2;
 ITEM.access = "1";
@@ -15,7 +14,7 @@ ITEM.category = "Reusables";
 ITEM.uniqueID = "cw_suitcase";
 --ITEM.isFakeWeapon = true;
 ITEM.isMeleeWeapon = true;
-ITEM.description = "ItemSuitcaseDesc";
+ITEM.description = "Luggage containing personal belongings.";
 ITEM.isAttachment = true;
 ITEM.attachmentBone = "ValveBiped.Bip01_R_Hand";
 ITEM.attachmentOffsetAngles = Angle(0, 90, -10);

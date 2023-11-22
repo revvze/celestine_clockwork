@@ -19,16 +19,19 @@ FACTION.models = {
 		"models/cppackredux/groundunits/betaunit_sentinel.mdl"
 }
 };
-FACTION.weapons = {
-	"cw_stunstick"
-};
+
+--FACTION.weapons = {
+--	"cw_stunstick"
+--};
+
 FACTION.startingInv = {
 	["handheld_radio"] = 1,
-	["weapon_pistol"] = 1,
-	["ammo_pistol"] = 2
+	["tfa_rtbr_pistol"] = 1,
+	["ammo_9mm"] = 2,
+	["tfa_rtbr_stunstick"] = 1
 };
 FACTION.respawnInv = {
-	["ammo_pistol"] = 2
+	["tfa_rtbr_stunstick"] = 1
 };
 FACTION.entRelationship = {
 	["npc_combine_s"] = "Like",
