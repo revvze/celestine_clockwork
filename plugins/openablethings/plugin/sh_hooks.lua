@@ -36,6 +36,27 @@ function PLUGIN:ClockworkInitialized()
 		["models/props_industrial/toolbox.mdl"] = {15, "Tool Cabinet"},
 		["models/props_c17/lockers001a.mdl"] = {20, "Lockers"},
 		["models/props_wasteland/kitchen_fridge001a.mdl"] = {20, "Refrigerator"},
-		["models/bioshockinfinite/loot_luggage2_open.mdl"] = {20, "Duffle Bag"}
+		["models/props_c17/FurnitureWashingmachine001a.mdl"] = {5, "Washing Machine"},
+		["models/props_interiors/Furniture_Vanity01a.mdl"] = {5, "Vanity Table"},
+		["models/props_junk/cardboard_box001a.mdl"] = {10, "Cardboard Box"},
+		["models/props_junk/cardboard_box001b.mdl"] = {10, "Cardboard Box"},
+		["models/props_junk/cardboard_box002a.mdl"] = {10, "Cardboard Box"},
+		["models/props_junk/cardboard_box002b.mdl"] = {10, "Cardboard Box"},
+		["models/props_junk/cardboard_box003a.mdl"] = {10, "Cardboard Box"},
+		["models/props_junk/cardboard_box003b.mdl"] = {10, "Cardboard Box"},
+		["models/props_junk/cardboard_box004a.mdl"] = {1, "Cardboard Box"},
+		["models/props_trainstation/trashcan_indoor001a.mdl"] = {7, "Trash Can"},
+		["models/props_trainstation/trashcan_indoor001b.mdl"] = {7, "Trash Can"},
+		["models/props_wasteland/kitchen_stove001a.mdl"] = {4, "Kitchen Stove"},
+		["models/props_wasteland/kitchen_stove002a.mdl"] = {4, "Kitchen Stove"},
+		["models/props_wasteland/laundry_dryer001.mdl"] = {10, "Laundry Machine"},
+		["models/props_wasteland/laundry_dryer002.mdl"] = {10, "Laundry Machine"},
+		["models/props_wasteland/laundry_washer001a.mdl"] = {5, "Washing Machine"},
+		["models/props_wasteland/laundry_washer003.mdl"] = {10, "Washing Machine"},
+		["models/props_c17/BriefCase001a.mdl"] = {2, "Briefcase"},
+		["models/props_c17/SuitCase001a.mdl"] = {3, "Suitcase"},
+		["models/props_c17/SuitCase_Passenger_Physics.mdl"] = {2, "Suitcase"}
+
+
 	};
 end;
