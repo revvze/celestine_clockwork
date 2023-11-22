@@ -55,7 +55,8 @@ function PLUGIN:ClockworkInitialized()
 		["models/props_wasteland/laundry_washer003.mdl"] = {10, "Washing Machine"},
 		["models/props_c17/BriefCase001a.mdl"] = {2, "Briefcase"},
 		["models/props_c17/SuitCase001a.mdl"] = {3, "Suitcase"},
-		["models/props_c17/SuitCase_Passenger_Physics.mdl"] = {2, "Suitcase"}
+		["models/props_c17/SuitCase_Passenger_Physics.mdl"] = {2, "Suitcase"},
+		["models/props_junk/TrashBin01a.mdl"] = {3, "Trash Bin"}
 
 
 	};
