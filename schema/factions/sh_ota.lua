@@ -32,11 +32,11 @@ FACTION.ranks = {
 FACTION.startingInv = {
 	["handheld_radio"] = 1,
 	["tfa_rtbr_oicw"] = 1,
-	--[""] = 1
+	["ammo_ar2"] = 2
 };
 FACTION.respawnInv = {
 	["tfa_rtbr_oicw"] = 1,
-	--[""] = 2
+	["ammo_ar2"] = 2
 };
 FACTION.entRelationship = {
 	["npc_combine_s"] = "Like",
