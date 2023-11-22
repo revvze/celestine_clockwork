@@ -33,7 +33,7 @@ FACTION.startingInv = {
 
 FACTION.respawnInv = {
 	["tfa_rtbr_stunstick"] = 1,
-	["ammo_9mm"] = 2,
+	["ammo_9mm"] = 2
 };
 
 FACTION.entRelationship = {
