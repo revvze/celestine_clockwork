@@ -8,7 +8,7 @@ FACTION.models = {
 };
 
 FACTION.weapons = {
-	"weapon_immolator_beta_alt"
+	"weapon_immolator"
 };
 
 FACTION.listenChannels = {
