@@ -13,10 +13,10 @@ FACTION.startChatNoise = "npc/overwatch/radiovoice/on1.wav";
 FACTION.endChatNoise = "npc/overwatch/radiovoice/off4.wav";
 FACTION.models = {
 	female = {
-		"models/cppackredux/groundunits/betaunit_sentinel.mdl"
+		"models/lantern/npc/rtb_police_npc.mdl"
 },
 	male = {
-		"models/cppackredux/groundunits/betaunit_sentinel.mdl"
+		"models/lantern/npc/rtb_police_npc.mdl"
 }
 };
 

@@ -1,3 +1,3 @@
-Clockwork.animation:AddCombineOverwatchModel("models/player/combfodderelite.mdl");
-Clockwork.animation:AddCombineOverwatchModel("models/player/combfodder.mdl");
-Clockwork.animation:AddCivilProtectionModel("models/cppackredux/groundunits/betaunit_sentinel.mdl");
+Clockwork.animation:AddCombineOverwatchModel("models/lantern/npc/rtb_combine_soldier_npc.mdl");
+Clockwork.animation:AddCombineOverwatchModel("models/lantern/npc/rtb_combine_super_soldier_npc.mdl");
+Clockwork.animation:AddCivilProtectionModel("models/lantern/npc/rtb_police_npc.mdl");

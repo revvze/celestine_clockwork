@@ -4,7 +4,7 @@ local FACTION = Clockwork.faction:New("Cremator");
 FACTION.isCombineFaction = true;
 FACTION.whitelist = true;
 FACTION.models = {
-	male = {"models/_monsters/combine/cremator.mdl"}
+	male = {"models/combine_cremator_oc.mdl"}
 };
 
 FACTION.weapons = {

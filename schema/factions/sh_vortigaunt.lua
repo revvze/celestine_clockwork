@@ -8,7 +8,7 @@ local FACTION = Clockwork.faction:New("Vortigaunt");
 FACTION.whitelist = true;
 FACTION.material = "hl2rp2/factions/vortigaunt";
 FACTION.models = {
-	male = {"models/vortigaunt_rp/vortigaunt.mdl"}
+	male = {"models/vjxe2_rtbr/vortigaunt_slave.mdl"}
 };
 
 function FACTION:GetName(player, character)

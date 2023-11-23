@@ -13,8 +13,7 @@ FACTION.maxArmor = 150;
 FACTION.startChatNoise = "npc/overwatch/radiovoice/on1.wav";
 FACTION.endChatNoise = "npc/overwatch/radiovoice/off4.wav";
 FACTION.models = {
-	female = {"models/player/combfodder.mdl"},
-	male = {"models/player/combfodder.mdl"}
+	male = {"models/lantern/npc/rtb_combine_soldier_npc.mdl"}
 };
 FACTION.ranks = {
 	["OWS"] = {
@@ -24,7 +23,7 @@ FACTION.ranks = {
 	["OWC"] = {
 		position = 1,
 		class = CLASS_OWC,
-		model = "models/player/combfodderelite.mdl",
+		model = "models/lantern/npc/rtb_combine_super_soldier_npc.mdl",
 		canPromote = 2,
 		canDemote = 2
 	}
