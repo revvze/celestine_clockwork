@@ -8,11 +8,11 @@ local ITEM = Clockwork.item:New();
 ITEM.name = "ItemZipTie";
 ITEM.uniqueID = "zip_tie";
 ITEM.cost = 4;
-ITEM.model = "models/items/crossbowrounds.mdl";
+ITEM.model = "models/Items/CrossbowRounds.mdl";
 ITEM.weight = 0.2;
 ITEM.access = "v";
 ITEM.useText = "Tie";
-ITEM.factions = {FACTION_MPF, FACTION_OTA};
+ITEM.factions = {FACTION_MPF};
 ITEM.business = true;
 ITEM.description = "ItemZipTieDesc";
 

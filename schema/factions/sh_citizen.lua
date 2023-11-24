@@ -7,30 +7,35 @@ local FACTION = Clockwork.faction:New("Citizen");
 
 FACTION.useFullName = true;
 FACTION.material = "hl2rp2/factions/citizen";
-FACTION.startingInv = {
-	["cw_suitcase"] = 1
-};
 FACTION.models = {
 	female = {
-		"models/willardnetworks/citizens/female_01.mdl",
-		"models/willardnetworks/citizens/female_02.mdl",
-		"models/willardnetworks/citizens/female_03.mdl",
-		"models/willardnetworks/citizens/female_04.mdl",
-		"models/willardnetworks/citizens/female_05.mdl",
-		"models/willardnetworks/citizens/female_06.mdl"
+		"models/humans/pandafishizens/female_01.mdl",
+		"models/humans/pandafishizens/female_02.mdl",
+		"models/humans/pandafishizens/female_03.mdl",
+		"models/humans/pandafishizens/female_04.mdl",
+		"models/humans/pandafishizens/female_05.mdl",
+		"models/humans/pandafishizens/female_06.mdl"
 },
 	male = {
-		"models/willardnetworks/citizens/male_01.mdl",
-		"models/willardnetworks/citizens/male_02.mdl",
-		"models/willardnetworks/citizens/male_03.mdl",
-		"models/willardnetworks/citizens/male_04.mdl",
-		"models/willardnetworks/citizens/male_05.mdl",
-		"models/willardnetworks/citizens/male_06.mdl",
-		"models/willardnetworks/citizens/male_07.mdl",
-		"models/willardnetworks/citizens/male_08.mdl",
-		"models/willardnetworks/citizens/male_09.mdl",
-		"models/willardnetworks/citizens/male_10.mdl"
+		"models/humans/pandafishizens/male_01.mdl",
+		"models/humans/pandafishizens/male_02.mdl",
+		"models/humans/pandafishizens/male_03.mdl",
+		"models/humans/pandafishizens/male_04.mdl",
+		"models/humans/pandafishizens/male_05.mdl",
+		"models/humans/pandafishizens/male_06.mdl",
+		"models/humans/pandafishizens/male_07.mdl",
+		"models/humans/pandafishizens/male_08.mdl",
+		"models/humans/pandafishizens/male_09.mdl",
+		"models/humans/pandafishizens/male_10.mdl"
 }
+};
+
+FACTION.startingInv = {
+	["weapon_suitcase"] = 1
+};
+
+FACTION.respawnInv = {
+	["weapon_suitcase"] = 1
 };
 
 -- Called when a player is transferred to the faction.

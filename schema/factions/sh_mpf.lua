@@ -20,20 +20,20 @@ FACTION.models = {
 }
 };
 
---FACTION.weapons = {
---	"cw_stunstick"
---};
-
 FACTION.startingInv = {
 	["handheld_radio"] = 1,
+	["zip_tie"] = 2,
 	["tfa_rtbr_pistol"] = 1,
 	["ammo_9mm"] = 2,
 	["tfa_rtbr_stunstick"] = 1
 };
 
 FACTION.respawnInv = {
-	["tfa_rtbr_stunstick"] = 1,
-	["ammo_9mm"] = 2
+	["handheld_radio"] = 1,
+	["zip_tie"] = 2,
+	["tfa_rtbr_pistol"] = 1,
+	["ammo_9mm"] = 2,
+	["tfa_rtbr_stunstick"] = 1
 };
 
 FACTION.entRelationship = {

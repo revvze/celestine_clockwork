@@ -34,6 +34,7 @@ FACTION.startingInv = {
 	["ammo_ar2"] = 2
 };
 FACTION.respawnInv = {
+	["handheld_radio"] = 1,
 	["tfa_rtbr_oicw"] = 1,
 	["ammo_ar2"] = 2
 };
