@@ -80,7 +80,7 @@ Clockwork.config:Get("enable_gravgun_punt"):Set(false);
 Clockwork.config:Get("default_inv_weight"):Set(6);
 Clockwork.config:Get("enable_crosshair", true);
 Clockwork.config:Get("disable_sprays"):Set(false);
-Clockwork.config:Get("prop_cost"):Set(false);
+Clockwork.config:Get("prop_cost"):Set(0);
 Clockwork.config:Get("door_cost"):Set(5);
 
 -- A function to add a human hint.
