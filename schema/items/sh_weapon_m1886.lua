@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "M1886 Rifle";
-ITEM.cost = 300;
+ITEM.cost = 100;
 ITEM.model = "models/weapons/annabelle/w_annabelle.mdl";
 ITEM.weight = 4;
 ITEM.access = "v";

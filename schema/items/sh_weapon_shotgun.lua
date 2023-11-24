@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "SPAS-12";
-ITEM.cost = 300;
+ITEM.cost = 100;
 ITEM.model = "models/weapons/w_shotgun.mdl";
 ITEM.weight = 4;
 ITEM.uniqueID = "tfa_rtbr_shotgun";

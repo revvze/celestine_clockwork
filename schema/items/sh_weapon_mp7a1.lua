@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "H&K MP7A1";
-ITEM.cost = 200;
+ITEM.cost = 80;
 ITEM.model = "models/weapons/smg1/w_smg1.mdl";
 ITEM.weight = 2.5;
 ITEM.uniqueID = "tfa_rtbr_smg1";

@@ -9,8 +9,11 @@ ITEM.name = "ItemBackpack";
 ITEM.uniqueID = "backpack";
 ITEM.model = "models/props_junk/garbage_bag001a.mdl";
 ITEM.weight = 2;
+ITEM.access = "v";
+ITEM.cost = 10;
 ITEM.category = "Storage";
 ITEM.isRareItem = true;
+ITEM.business = true;
 ITEM.description = "ItemBackpackDesc";
 ITEM.addInvSpace = 8;
 

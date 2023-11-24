@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "Pickaxe";
-ITEM.cost = 20;
+ITEM.cost = 10;
 ITEM.model = "models/weapons/hl2meleepack/w_pickaxe.mdl";
 ITEM.weight = 2;
 ITEM.access = "v";

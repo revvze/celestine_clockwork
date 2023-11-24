@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "Colt Python";
-ITEM.cost = 300;
+ITEM.cost = 70;
 ITEM.model = "models/weapons/357/w_357.mdl";
 ITEM.weight = 2;
 ITEM.access = "v";

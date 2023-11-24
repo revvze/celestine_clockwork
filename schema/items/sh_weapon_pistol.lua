@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "H&K USP Match";
-ITEM.cost = 100;
+ITEM.cost = 70;
 ITEM.model = "models/weapons/pistol/w_pistol.mdl";
 ITEM.weight = 1;
 ITEM.uniqueID = "tfa_rtbr_pistol";

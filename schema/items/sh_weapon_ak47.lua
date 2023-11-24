@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "AK-47";
-ITEM.cost = 400;
+ITEM.cost = 100;
 ITEM.model = "models/weapons/akm/w_akm.mdl";
 ITEM.weight = 4;
 ITEM.access = "v";

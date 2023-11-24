@@ -6,7 +6,7 @@
 local ITEM = Clockwork.item:New("weapon_base");
 
 ITEM.name = "LAR Grizzly Big Bore";
-ITEM.cost = 500;
+ITEM.cost = 150;
 ITEM.model = "models/weapons/sniper/w_sniper.mdl";
 ITEM.weight = 5;
 ITEM.uniqueID = "tfa_rtbr_sniperrifle";
