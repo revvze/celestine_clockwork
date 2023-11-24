@@ -12,15 +12,15 @@ Clockwork.kernel:IncludePrefixed("sv_hooks.lua");
 
 Schema.customPermits = {};
 
-for k, v in pairs(_file.Find("models/humans/group17/*.mdl", "GAME")) do
-	Clockwork.animation:AddMaleHumanModel("models/humans/group17/"..v);
+for k, v in pairs(_file.Find("models/humans/pandafishizens/*.mdl", "GAME")) do
+	Clockwork.animation:AddMaleHumanModel("models/humans/pandafishizens/"..v);
 end;
 
 Clockwork.option:SetKey("default_date", {month = 1, year = 2016, day = 1});
 Clockwork.option:SetKey("default_time", {minute = 0, hour = 0, day = 1});
 Clockwork.option:SetKey("model_shipment", "models/items/item_item_crate.mdl");
-Clockwork.option:SetKey("intro_image", "celestine/HL2RP_Logo");
-Clockwork.option:SetKey("schema_logo", "celestine/HL2RP_Logo");
+Clockwork.option:SetKey("intro_image", "hl2rp2/hl2rp2019");
+Clockwork.option:SetKey("schema_logo", "hl2rp2/hl2rp2019");
 Clockwork.option:SetKey("menu_music", "music/operation_stabilization.mp3");
 Clockwork.option:SetKey("model_cash", "models/uupack/10tokens.mdl");
 Clockwork.option:SetKey("gradient", "hl2rp2/gradient");
