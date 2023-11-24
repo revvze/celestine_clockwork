@@ -9,6 +9,7 @@ ITEM.name = "12 Gauge Ammunition";
 ITEM.cost = 30;
 ITEM.model = "models/items/boxbuckshot.mdl";
 ITEM.weight = 1;
+ITEM.access = "v";
 ITEM.uniqueID = "ammo_buckshot";
 ITEM.business = true;
 ITEM.ammoClass = "buckshot";

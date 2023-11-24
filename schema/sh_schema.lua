@@ -22,13 +22,15 @@ Clockwork.option:SetKey("model_shipment", "models/items/item_item_crate.mdl");
 Clockwork.option:SetKey("intro_image", "celestine/HL2RP_Logo");
 Clockwork.option:SetKey("schema_logo", "celestine/HL2RP_Logo");
 Clockwork.option:SetKey("menu_music", "music/operation_stabilization.mp3");
-Clockwork.option:SetKey("model_cash", "models/props_lab/box01a.mdl");
+Clockwork.option:SetKey("model_cash", "models/uupack/10tokens.mdl");
 Clockwork.option:SetKey("gradient", "hl2rp2/gradient");
 
 Clockwork.config:ShareKey("intro_text_small");
 Clockwork.config:ShareKey("intro_text_big");
 Clockwork.config:ShareKey("business_cost");
 Clockwork.config:ShareKey("permits");
+
+Clockwork.flag:Add("v", "Black Market", "Access to blackmarket goods.");
 
 Clockwork.quiz:SetEnabled(true);
 Clockwork.quiz:AddQuestion("QuizOption1", 1, "QuizAnswerYes", "QuizAnswerNo");

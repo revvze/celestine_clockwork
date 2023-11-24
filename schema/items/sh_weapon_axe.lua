@@ -9,8 +9,9 @@ ITEM.name = "Axe";
 ITEM.cost = 10;
 ITEM.model = "models/weapons/hl2meleepack/w_axe.mdl";
 ITEM.weight = 1;
+ITEM.access = "v";
 ITEM.uniqueID = "weapon_hl2axe";
-ITEM.business = false;
+ITEM.business = true;
 ITEM.description = "Old woodcutter's axe.";
 ITEM.isAttachment = false;
 

@@ -9,8 +9,9 @@ ITEM.name = "Crowbar";
 ITEM.cost = 10;
 ITEM.model = "models/weapons/w_crowbar.mdl";
 ITEM.weight = 1;
+ITEM.access = "v";
 ITEM.uniqueID = "weapon_crowbar";
-ITEM.business = false;
+ITEM.business = true;
 ITEM.description = "Sturdy metal crowbar.";
 ITEM.isAttachment = false;
 
