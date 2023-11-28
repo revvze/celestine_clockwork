@@ -105,7 +105,7 @@ FACTION.ranks = {
 
 -- Called when a player's name should be assigned for the faction.
 function FACTION:GetName(player, character)
-	return "MPF.TAGLINE-"..Clockwork.kernel:ZeroNumberToDigits(math.random(1, 99999), 5);
+	return "MPF.RCT:TAGLINE-"..Clockwork.kernel:ZeroNumberToDigits(math.random(1, 99999), 5);
 end;
 
 -- Called when a player's model should be assigned for the faction.
