@@ -62,7 +62,7 @@ FACTION.entRelationship = {
 function FACTION:GetName(player, character)
 	local unitID = math.random(1, 99999);
 	
-	return "OTA."..Clockwork.kernel:ZeroNumberToDigits(unitID, 5);
+	return "OTA..TAGLINE-"..Clockwork.kernel:ZeroNumberToDigits(unitID, 5);
 end;
 
 -- Called when a player's model should be assigned for the faction.
