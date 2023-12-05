@@ -7,7 +7,7 @@ local FACTION = Clockwork.faction:New("Administrator");
 
 FACTION.useFullName = true;
 FACTION.whitelist = true;
-FACTION.material = "hl2rp2/factions/admin";
+FACTION.material = "celestine/factions/consul";
 FACTION.maxArmor = 100;
 FACTION.models = {
 	male = {

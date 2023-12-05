@@ -7,7 +7,7 @@ local FACTION = Clockwork.faction:New("Metropolice Force");
 
 FACTION.isCombineFaction = true;
 FACTION.whitelist = true;
-FACTION.material = "hl2rp2/factions/mpf";
+FACTION.material = "celestine/factions/metropolice";
 FACTION.maxArmor = 100;
 FACTION.startChatNoise = "npc/overwatch/radiovoice/on1.wav";
 FACTION.endChatNoise = "npc/overwatch/radiovoice/off4.wav";

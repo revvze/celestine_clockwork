@@ -7,7 +7,7 @@ local FACTION = Clockwork.faction:New("Overwatch Transhuman Arm");
 
 FACTION.isCombineFaction = true;
 FACTION.whitelist = true;
-FACTION.material = "hl2rp2/factions/ota";
+FACTION.material = "celestine/factions/overwatch";
 FACTION.maxHealth = 150;
 FACTION.maxArmor = 150;
 FACTION.startChatNoise = "npc/overwatch/radiovoice/on1.wav";

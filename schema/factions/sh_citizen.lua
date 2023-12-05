@@ -6,7 +6,7 @@
 local FACTION = Clockwork.faction:New("Citizen");
 
 FACTION.useFullName = true;
-FACTION.material = "hl2rp2/factions/citizen";
+FACTION.material = "celestine/factions/citizen";
 FACTION.models = {
 	female = {
 		"models/humans/pandafishizens/female_01.mdl",

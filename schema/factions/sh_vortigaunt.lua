@@ -6,7 +6,7 @@
 local FACTION = Clockwork.faction:New("Vortigaunt");
 
 FACTION.whitelist = true;
-FACTION.material = "hl2rp2/factions/vortigaunt";
+FACTION.material = "celestine/factions/vortigaunt";
 FACTION.models = {
 	male = {"models/vjxe2_rtbr/vortigaunt_slave.mdl"}
 };

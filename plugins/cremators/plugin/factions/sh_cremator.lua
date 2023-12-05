@@ -1,6 +1,7 @@
 
 local FACTION = Clockwork.faction:New("Cremator");
 
+FACTION.material = "celestine/factions/cremator";
 FACTION.isCombineFaction = true;
 FACTION.whitelist = true;
 FACTION.models = {
